@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>somando numeros</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
+        }
+        input{
+            width: 100px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        div{
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            width: 290px;
+        }
+    </style>
 </head>
 <body>
-    <h1>somando valores</h1>
+    <h1>Somando valores</h1>
     <input type="number" name="txtn1" id="txtn1">
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" onclick="somar()">
-    <div id="res">Resultado :</div>
+    <div id="res">Resultado:</div>
     <script>
         function somar(){
             var tn1 = document.getElementById('txtn1')
@@ -19,7 +37,7 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = s
+            res.innerHTML = 'Resultado:'+s
         }
 
     </script>
