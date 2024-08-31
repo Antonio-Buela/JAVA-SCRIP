@@ -3,22 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Condições em javascript</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        h1{
+            font-weight: bold;
+            text-align: center;
+
+        }
+        input{
+            border-radius: 5px;
+            text-align: center;
+
+        }
+        #txtvl{
+            width: 100px;
+        }
+        input:hover{
+            background-color: rgba(0, 0, 255, 0.452);
+        }
+
+    </style>
 </head>
 <body>
-    <h1>sistema publico</h1>
-    velocidade do carro: <input type="number" name="txtvl" id="txtvl">km/h
-    <input type="button" value="verificar" onclick="calcular()">
+    <h1>Sistema Público</h1>
+    
+    Velocidade do carro: <input type="number" name="txtvl" id="txtvl" > <strong>km/h</strong>
+ <input type="button" value="verificar" onclick="calcular()">
     <div id="res"></div>
+    
     <script>
-        function calcular{
-        var txt = document.getElementById('txtvl')
+        
+        function calcular (){
+        
+            var txt = document.getElementById('txtvl')
         var res= document.getElementById('res')
-            var vel = Number(txt.value)
-            res.innerHTML= 'sua velocidade atual é'+vel 'km/h'
-            if(vel > 60){
-                res.innerHTML += '<p>voce ultrapassou o limite</p>'
+         var vel = Number(txt.value)
+     
+         res.innerHTML= 'sua velocidade atual é de : ' +vel 
+           
+            if(vel <= 60){
+                res.innerHTML += '<p> voce esta na velocidade certa </p>'
             }
+            else{
+                res.innerHTML += '<p> voce ultrapassou o limite ,Multado!</p>'
+            }
+            console.log('dirija com cuidade')
         }
     </script>
 </body>
